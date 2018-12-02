@@ -32,14 +32,10 @@ export class LoginPage {
     this.http.post(
       `http://gdr.jhonylara.com.br/api/usuario/auth`, { email: emailInp, senha: senhaInp }
     ).pipe(map((response: any) => {
-      localStorage['token'] = response.token;
-
-      if (localStorage['nome'] === response['nome']) {
-        localStorage['nome'] = response['nome'];
-      } else {
-        localStorage['nome'] = response['nome'];
-        localStorage['id'] = response.id;
-      }
+      const res = response.json();
+      localStorage['token'] = res.token;
+      localStorage['nome'] = res.nome;
+      localStorage['id'] = res.id;
     })).subscribe(() => {
       this.navCtrl.push(HomePage);
     },

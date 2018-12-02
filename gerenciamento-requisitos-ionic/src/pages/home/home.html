@@ -6,5 +6,12 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-
+    <ion-list>
+      <button
+        ion-item
+        *ngFor="let item of obsProjetos | async"
+      >
+        {{ item.nome }}
+      </button>
+    </ion-list>
 </ion-content>
