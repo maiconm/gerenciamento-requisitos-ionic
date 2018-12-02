@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <div [formGroup]="cadastroForm">
+            <ion-item>
+              <ion-input
+                formControlName="nome"
+                type="text"
+                placeholder="Nome"
+              >
+              </ion-input>
+            </ion-item>
+          <ion-item>
+            <ion-input
+              formControlName="email"
+              type="email"
+              placeholder="email"
+            >
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input
+              formControlName="senha"
+              type="password"
+              placeholder="Senha"
+            >
+            </ion-input>
+          </ion-item>
+        </div>
+
+      </ion-list>
+      <div padding>
+        <button
+          (click)="cadastrarBtn()"
+          ion-button
+        >
+          Cadastrar
+        </button>
+      </div>
+</ion-content>

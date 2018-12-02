@@ -1,0 +1,7 @@
+{
+  "name": "gerenciamento-requisitos-ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
