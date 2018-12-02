@@ -9,13 +9,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
+import { NovoProjetoPage } from '../pages/novo-projeto/novo-projeto';
 
 @NgModule({
   declarations: [
     CadastroPage,
     LoginPage,
     MyApp,
-    HomePage
+    HomePage,
+    NovoProjetoPage,
   ],
   imports: [
     HttpModule,
@@ -24,6 +26,7 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    NovoProjetoPage,
     CadastroPage,
     LoginPage,
     MyApp,

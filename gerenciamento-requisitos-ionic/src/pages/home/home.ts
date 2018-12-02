@@ -7,6 +7,7 @@ import { map, take } from 'rxjs/operators';
 
 import { Projeto } from '../../classes/projeto';
 import { IProjeto } from '../../interfaces/projeto.interface';
+import { NovoProjetoPage } from '../novo-projeto/novo-projeto';
 
 @Component({
   selector: 'page-home',
@@ -24,7 +25,6 @@ export class HomePage {
   }
 
   protected getProjetos(): Observable<Projeto[]> {
-    console.log('aqui');
     const headerDict = {
       'Authorization': `Bearer ${localStorage.token}`
     }
@@ -54,6 +54,10 @@ export class HomePage {
         ),
         take(1)
       );
+  }
+
+  public goToNovoProjeto() {
+    this.navCtrl.push(NovoProjetoPage);
   }
 
 }

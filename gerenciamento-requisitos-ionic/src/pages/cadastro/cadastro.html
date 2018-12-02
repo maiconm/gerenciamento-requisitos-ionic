@@ -42,6 +42,7 @@
         <button
           (click)="cadastrarBtn()"
           ion-button
+          [disabled]="!cadastroForm.valid"
         >
           Cadastrar
         </button>

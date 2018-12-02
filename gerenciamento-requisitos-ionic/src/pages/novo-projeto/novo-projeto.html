@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>NovoProjeto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <div [formGroup]="projetoForm">
+      <ion-item>
+        <ion-label fixed>Nome</ion-label>
+        <ion-input
+          formControlName="nome"
+          type="text"
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Data inicio</ion-label>
+        <ion-datetime
+          pickerFormat="DD-MM-YYYY"
+          formControlName="dataInicio"
+        >
+        </ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Data fim</ion-label>
+        <ion-datetime
+          pickerFormat="DD-MM-YYYY"
+          formControlName="dataFim"
+        >
+        </ion-datetime>
+      </ion-item>
+    </div>
+
+  </ion-list>
+  <div padding>
+    <button
+      (click)="criarBtn()"
+      ion-button
+      [disabled]="!projetoForm.valid"
+    >
+      Criar
+    </button>
+  </div>
+
+</ion-content>

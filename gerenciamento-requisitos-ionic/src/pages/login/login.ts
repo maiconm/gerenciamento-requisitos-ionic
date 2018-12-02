@@ -23,6 +23,7 @@ export class LoginPage {
     public navParams: NavParams
   ) {
     this.initForm();
+    localStorage.token ? this.navCtrl.push(HomePage) : null;
   }
 
   ionViewDidLoad() {
@@ -38,6 +39,7 @@ export class LoginPage {
       localStorage['id'] = res.id;
     })).subscribe(() => {
       this.navCtrl.push(HomePage);
+      location.reload();
     },
     () => {
       const toast = this.toastCtrl.create({
