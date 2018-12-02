@@ -58,7 +58,7 @@ export class NovoProjetoPage {
       nome: nomeInp,
       dataInicio: data1,
       dataFim: data2,
-      status: 'criando'
+      status: 'Criando' // TODO: Implementar status.
     };
     this.http.post(`http://gdr.jhonylara.com.br/api/usuario/${localStorage.id}/projeto`, iProj, {headers: new Headers(headerDict)})
       .subscribe(() => {
